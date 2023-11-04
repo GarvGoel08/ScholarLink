@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      width: 100%;
+    }
+
+    li {
+      float: right;
+    }
+
+    li a,
+    .dropbtn,
+    .dropdown-content a,
+    .subdropdown-content a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .brand {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown-content,
+    .subdropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 15px;
+      /* For curved rectangular box */
+      background-color: #333;
+    }
+
+    .subdropdown-content {
+      left: 100%;
+      top: 0;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .subdropdown:hover .subdropdown-content {
+      display: block;
+      animation: fadein 0.3s ease-in;
+      /* decrease animation time and add ease-in function in animation */
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .header {
+      background: black;
+      height: 500px;
+      position: relative;
+      text-align: center;
+      color: white;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    .header .brand {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3em;
+    }
+
+    .header .circle {
+
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+
+    .circle {
+      opacity: 0.1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1 class="brand">ScholrLink</h1>
+    <div class="circle" style="top: 50px; left: 150px;"></div>
+    <div class="circle" style="top: 200px; left: 300px;"></div>
+    <div class="circle" style="top: 400px; left: 50px;"></div>
+    <div class="circle" style="top: 300px; left: 450px;"></div>
+  </div>
+  <div style="position: fixed;width:100%;left: 0px;top: 0px">
+    <ul>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#Booksession">Book session</a></li>
+      <li class="dropdown">
+        <a href="#Career" class="dropbtn">Career</a>
+        <div class="dropdown-content">
+          <div class="subdropdown">
+            <a href="#">Option 1</a>
+            <div class="subdropdown-content">
+              <a href="#">Sub-option 1</a>
+              <a href="#">Sub-option 2</a>
+              <a href="#">Sub-option 3</a>
+            </div>
+          </div>
+          <div class="subdropdown">
+            <a href="#">Option 2</a>
+            <div class="subdropdown-content">
+              <a href="#">Sub-option 1</a>
+              <a href="#">Sub-option 2</a>
+              <a href="#">Sub-option 3</a>
+            </div>
+          </div>
+          <div class="subdropdown">
+            <a href="#">Option 3</a>
+            <div class="subdropdown-content">
+              <a href="#">Sub-option 1</a>
+              <a href="#">Sub-option 2</a>
+              <a href="#">Sub-option 3</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <a class="brand" href="#">ScholarLink</a>
+    </ul>
+  </div>
+</body>
+
+</html>
